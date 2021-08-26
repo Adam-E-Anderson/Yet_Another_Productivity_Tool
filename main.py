@@ -7,7 +7,7 @@ daily_todo = []
 low_priority = []
 exit_program = False
 while not exit_program:
-    print("-----Menu----- \n1.Insert High Priority Item\n2.Daily To Do's\n3.Low Priorites")
+    print("-----Menu----- \n1.Insert High Priority Item\n2.Daily To Do's\n3.Low Priorites\n4.Print Priorities")
     menu_selection = int(input())
 
     if menu_selection == 1:
@@ -19,6 +19,10 @@ while not exit_program:
     elif menu_selection == 3:
         item = input("Enter your Low Priority item: ")
         low_priority.append(item)
+    elif menu_selection == 4:
+        print("High Priorites")
+        for i in range(len(high_priority)):
+            print(i+1, high_priority[i])
     else:
         print("Invalid selection. Exiting the program")
         exit_program = True
